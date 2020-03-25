@@ -15,7 +15,7 @@
         <service android:name=".download.DownloadService" />
 
         <provider
-            android:name="androidx.core.content.FileProvider"
+            android:name=".DownloadFileProvider"
             android:authorities="${applicationId}.fileProvider"
             android:exported="false"
             android:grantUriPermissions="true">

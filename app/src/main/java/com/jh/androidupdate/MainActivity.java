@@ -11,6 +11,7 @@ import androidx.core.content.FileProvider;
 
 import com.jh.androidautoupdate.AndroidAutoUpdate;
 import com.jh.androidautoupdate.AndroidAutoUpdateConfig;
+import com.jh.androidautoupdate.download.DownloadListener;
 
 import java.io.File;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         androidAutoUpdateConfig.setApkUrl("your APK url");
         androidAutoUpdateConfig.setApkPath(Objects.requireNonNull(getExternalFilesDir("")).getPath());
         androidAutoUpdateConfig.setApkName("***.apk");
-        androidAutoUpdateConfig.setDownloadListener(new com.jh.androidautoupdate.download.DownloadListener() {
+        androidAutoUpdateConfig.setDownloadListener(new DownloadListener() {
             @Override
             public void onDownloadPrepare() {
 
